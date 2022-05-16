@@ -40,13 +40,13 @@ public:
 
 int main()
 {   
-    //²âÊÔ
+    //Â²Ã¢ÃŠÃ”
     //TreeNode* root = new TreeNode(2);
     //TreeNode* r = new TreeNode(3);
     //root->right = r;
 
     //Solution s;
-    //cout << s.inorderSuccessor(root, root)->val << endl;          //·µ»Ø3
+    //cout << s.inorderSuccessor(root, root)->val << endl;          //Â·ÂµÂ»Ã˜3
 
     return 0;
 }
