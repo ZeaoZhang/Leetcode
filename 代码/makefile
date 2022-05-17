@@ -34,5 +34,9 @@
 04_06-test:04_06-test.cpp
 	g++ 04_06-test.cpp -std=c++11 -o 04_06-test
 
+953:953.hpp
+	g++ 953.hpp -std=c++11 -o 953
+953-test:953-test.cpp
+	g++ 953-test.cpp -std=c++11 -o 953-test
 clean:
 	rm -rf `ls | grep [^pp]$$`
