@@ -37,16 +37,3 @@ public:
         return NULL;
     }
 };
-
-int main()
-{   
-    //²âÊÔ
-    //TreeNode* root = new TreeNode(2);
-    //TreeNode* r = new TreeNode(3);
-    //root->right = r;
-
-    //Solution s;
-    //cout << s.inorderSuccessor(root, root)->val << endl;          //·µ»Ø3
-
-    return 0;
-}
