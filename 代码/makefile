@@ -38,5 +38,11 @@
 	g++ 953.hpp -std=c++11 -o 953
 953-test:953-test.cpp
 	g++ 953-test.cpp -std=c++11 -o 953-test
+
+668:668.hpp
+	g++ 668.hpp -std=c++11 -o 668
+668-test:668-test.cpp
+	g++ 668-test.cpp -std=c++11 -o 668-test
+
 clean:
 	rm -rf `ls | grep [^pp]$$`
