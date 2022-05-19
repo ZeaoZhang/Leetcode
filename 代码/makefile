@@ -44,5 +44,10 @@
 668-test:668-test.cpp
 	g++ 668-test.cpp -std=c++11 -o 668-test
 
+462:462.hpp
+	g++ 462.hpp -std=c++11 -o 462
+462-test:462-test.cpp
+	g++ 462-test.cpp -std=c++11 -o 462-test
+
 clean:
 	rm -rf `ls | grep [^pp]$$`
