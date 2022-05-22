@@ -59,5 +59,10 @@
 961-test:961-test.cpp
 	g++ 961-test.cpp -std=c++11 -o 961-test
 
+464:464.hpp
+	g++ 464.hpp -std=c++11 -o 464
+464-test:464-test.cpp
+	g++ 464-test.cpp -std=c++11 -o 464-test
+
 clean:
 	rm -rf `ls | grep [^pp]$$`
