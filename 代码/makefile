@@ -28,7 +28,6 @@
 01_05-test:01_05-test.cpp
 	g++ 01_05-test.cpp -std=c++11 -o 01_05-test
 
-
 04_06:04_06.hpp
 	g++ 04_06.hpp -std=c++11 -o 04_06
 04_06-test:04_06-test.cpp
@@ -68,6 +67,11 @@
 	g++ 675.hpp -std=c++11 -o 675
 675-test:675-test.cpp
 	g++ 675-test.cpp -std=c++11 -o 675-test
+
+965:965.hpp
+	g++ 965.hpp -std=c++11 -o 965
+965-test:965-test.cpp
+	g++ 965-test.cpp -std=c++11 -o 965-test
 
 clean:
 	rm -rf `ls | grep [^pp]$$`
