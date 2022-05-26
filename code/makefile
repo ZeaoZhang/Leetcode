@@ -9,4 +9,4 @@ CXXFLAGS=-std=c++11 -I ./includes
 
 
 clean:
-	rm -rf `ls | grep [^cpp]$$
+	rm -rf `ls | grep [^cpp]$$`
