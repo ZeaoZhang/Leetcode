@@ -10,7 +10,7 @@ CXXFLAGS=-std=c++11 -I ./includes
 all:
 	make $(foreach file,$(BIN),$(file))
 
-test:
+run:
 	$(foreach file,$(BIN),./$(file);)
 
 
