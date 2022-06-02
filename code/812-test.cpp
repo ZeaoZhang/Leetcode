@@ -1,4 +1,4 @@
-#include"812.hpp"
+#include"./includes/812.hpp"
 
 void insert(vector<vector<int>>& points, int x, int y)
 {
@@ -18,8 +18,11 @@ int main()
     insert(points, 0, 2);
     insert(points, 2, 0);
 
-    //最大面积由(0, 0), (0, 2), (2, 0)组成的三角形，输出2
-    cout << solution.largestTriangleArea(points) << endl;           
+    if(solution.largestTriangleArea(points) == 2)   
+    {
+        return 1;
+    }
+
 
     return 0;
 }

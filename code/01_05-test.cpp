@@ -1,4 +1,4 @@
-#include"01_05.hpp"
+#include"./includes/01_05.hpp"
 
 int main()
 {
@@ -7,8 +7,9 @@ int main()
     string b = "abec";
     string c = "a";
     Solution solution;
-    cout << solution.oneEditAway(a, b) << endl;     //一次插入即可，返回True
-    cout << solution.oneEditAway(a, c) << endl;     //一次操作不行，返回False
-
+    if(solution.oneEditAway(a, b) == true && solution.oneEditAway(a, c) == false)
+    {
+        return 1;
+    }
     return 0;
 }

@@ -12,8 +12,10 @@ int main()
 	TreeNode* t1 = new TreeNode(1, t2, t3);
 	Solution solution;
 	//（100）+（101）+（110）+（111） =  22 ， 输出22
-	cout << solution.sumRootToLeaf(t1) << endl;
-
+	if(solution.sumRootToLeaf(t1) == 22)
+	{
+		return 1;
+	}
 
 	return 0;
 }

@@ -5,15 +5,15 @@ CXX=g++
 CXXFLAGS=-std=c++11 -I ./includes
 
 *:$(findstring *,$(SRC))
-	$(CXX) $@ $(CXXFLAGS) -o $^
+	@$(CXX) $@ $(CXXFLAGS) -o $^
 
 all:
-	make $(foreach file,$(BIN),$(file))
+	@make $(BIN)
 
-run:
-	$(foreach file,$(BIN),./$(file);)
+test:
+	@$(foreach file,$(BIN),./$(file);if [ $$? -eq 1 ];then echo $(file) OK;else echo $(file) False;fi;)
 
 
 .PHONY:clean
 clean:
-	rm -rf $(BIN)
+	@rm -rf $(BIN)

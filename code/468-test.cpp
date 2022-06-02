@@ -1,11 +1,14 @@
-#include "468.hpp"
+#include "./includes/468.hpp"
 
 int main()
 {
 	string s = "101.2.3.4";
 	Solution solution;
 	//输出IPv4
-	cout << solution.validIPAddress(s) << endl;
+	if(solution.validIPAddress(s) == "IPv4")
+	{
+		return 1;
+	}
 
 	return 0;
 }

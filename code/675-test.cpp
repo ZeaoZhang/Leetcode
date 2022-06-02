@@ -1,4 +1,4 @@
-#include"675.hpp"
+#include"./includes/675.hpp"
 
 
 int main()
@@ -10,8 +10,11 @@ int main()
 	//  1   2   3
 	//  0   0   4
 	//  7   6   5
-	//从1到7需要走6步
 	Solution s;
-	cout << s.cutOffTree(v) << endl;		//输出6
+	if(s.cutOffTree(v) == 6)
+	{
+		return 1;
+	}
 
+	return 0;
 }

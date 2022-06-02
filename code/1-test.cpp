@@ -1,15 +1,18 @@
-#include"1.hpp"
+#include"./includes/1.hpp"
 
 int main()
 {
     Solution s;
     vector<int> nums = { 2, 7, 11, 15 };
-    int target = 9;
-    vector<int> result = s.twoSum(nums, target);
-    for (auto i : result)
+    vector<int> result = s.twoSum(nums, 9);
+    int sum = 0;
+    for(int i : result)
     {
-        cout << i << endl;
+        sum += nums[i];
     }
-
+    if(sum == 9)
+    {
+        return 1;
+    }
     return 0;
 }

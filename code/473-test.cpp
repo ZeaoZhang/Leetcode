@@ -1,4 +1,4 @@
-#include "473.hpp"
+#include "./includes/473.hpp"
 
 int main()
 {
@@ -6,13 +6,8 @@ int main()
 	Solution solution;
 	if (solution.makesquare(v) == true)
 	{
-		cout << "473 OK" << endl;
+		return 1;
 	}
-	else
-	{
-		cout << "473 false" << endl;
-	}
-
 
 
 	return 0;

@@ -1,12 +1,15 @@
-#include"462.hpp"
+#include"./includes/462.hpp"
 
 int main()
 {
     vector<int> nums = { 1, 2 , 3 };
     Solution solution;
-    //Ö»ÐèÒªÁ½²½²Ù×÷£¨Ã¿²½²Ù×÷Ö¸ÄÏÊ¹Ò»¸öÔªËØ¼Ó 1 »ò¼õ 1£©£º
+    //åªéœ€è¦ä¸¤æ­¥æ“ä½œ
     //[1, 2, 3] = > [2, 2, 3] = > [2, 2, 2]
-    cout << solution.minMoves2(nums) << endl; //Êä³ö2
+    if(solution.minMoves2(nums) == 2)
+    {
+        return 1;
+    }
 
 
     return 0;

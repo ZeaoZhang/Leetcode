@@ -8,11 +8,7 @@ int main()
 	string result = solution.replaceDigits(s);
 	if (result == "abcdef")
 	{
-		cout << "1844 OK" << endl;
-	}
-	else
-	{
-		cout << "1844 false" << endl;
+		return 1;
 	}
 
 

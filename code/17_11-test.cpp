@@ -1,4 +1,4 @@
-#include"17_11.hpp"
+#include"./includes/17_11.hpp"
 
 int main()
 {
@@ -16,9 +16,9 @@ int main()
 	string word1 = "a", word2 = "student";
 	//words = ["I","am","a","student","from","a","university","in","a","city"], word1 = "a", word2 = "student"
 	Solution s;
-	//Êä³ö1
-	cout << s.findClosest(words, word1, word2) << endl;
-
-
+	if(s.findClosest(words, word1, word2) == 1)
+	{
+		return 1;
+	}
 	return 0;
 }

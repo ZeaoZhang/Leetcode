@@ -1,4 +1,4 @@
-#include"895.hpp"
+#include"./includes/895.hpp"
 
 int main()
 {   
@@ -9,9 +9,9 @@ int main()
     freqStack.push(7);         // 5, 7, 5, 7
     freqStack.push(4);         // 5, 7, 5, 7, 4
     freqStack.push(5);         // 5, 7, 5, 7, 4, 5
-    for (int i = 0; i < 4; ++i)
+    if(freqStack.pop() == 5 && freqStack.pop() == 7)
     {
-        cout << freqStack.pop() << endl;       //ÒÀ´Îµ¯³ö5,7,5,4
+        return 1;
     }
     
 

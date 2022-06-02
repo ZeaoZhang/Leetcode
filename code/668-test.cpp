@@ -1,4 +1,4 @@
-#include"668.hpp"
+#include"./includes/668.hpp"
 
 int main()
 {
@@ -6,9 +6,11 @@ int main()
     //1	 2	3
     //2	 4	6
     //3  6	9
-    //第5小的数字是 3 (1, 2, 2, 3, 3).
     Solution solution;
-    cout << solution.findKthNumber(m, n, k) << endl; //输出3
+    if(solution.findKthNumber(m, n, k) == 3)
+    {
+        return 1;
+    }
 
 
     return 0;

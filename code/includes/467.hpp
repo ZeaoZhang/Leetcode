@@ -1,14 +1,16 @@
 #include<iostream>
 #include<string>
+#include<algorithm>
 using namespace std;
 
 class Solution {
 public:
     int findSubstringInWraproundString(string p) {
         int count[26];
-        memset(count, 0, sizeof(count));
+        fill(count, count + 26, 0);
         int num;
-        for (int i = 0; i < p.size(); ++i)
+        int len = p.size();
+        for (int i = 0; i < len; ++i)
         {
             num = 1;
             int j = i;
