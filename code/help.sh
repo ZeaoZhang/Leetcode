@@ -32,7 +32,7 @@ case $number in
 		read -p "Please input docker id: " id
 		read -p "Please input file name you want to dowmload: " name
 		read -p "please input addresss you want to save: " address
-		docker cp $id:/leetcode/code/$name $saveaddress
+		cp $id:/leetcode/code/$name $saveaddress
 		;;
 	6)
 		make clean
