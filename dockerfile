@@ -8,5 +8,8 @@ WORKDIR /leetcode/code
 
 RUN apt-get update && apt-get -y install g++ && apt-get -y install make
 
+CMD ["bash", "help.sh"]
+
+
 
 
