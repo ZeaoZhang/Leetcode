@@ -1,7 +1,8 @@
 #!/bin/bash
 
-
-echo -e "Please select an action\n \
+while :
+do
+echo -e "Please select an action: \n \
 	0 Show all source files\n \
 	1 Compile all source files\n \
 	2 Show all executable files\n \
@@ -10,8 +11,6 @@ echo -e "Please select an action\n \
 	5 save executable file \n \
 	6 clean all executable files"
 
-while :
-do
 read -p "please input number: " number
 case $number in
 	0)
@@ -42,14 +41,4 @@ case $number in
 		echo "ValueError, please input again"
 		;;
 esac
-
-echo -e "Please select an action\n \
-	0 Show all source files\n \
-	1 Compile all source files\n \
-	2 Show all executable files\n \
-	3 test all executable files\n \
-	4 exit\n \
-	5 save executable file \n \
-	6 clean all executable files"
-
 done
