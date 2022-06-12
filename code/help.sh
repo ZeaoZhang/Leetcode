@@ -8,8 +8,7 @@ echo -e "Please select an action: \n \
 	2 Show all executable files\n \
 	3 test all executable files\n \
 	4 exit\n \
-	5 save executable file \n \
-	6 clean all executable files"
+	5 clean all executable files"
 
 read -p "please input number: " number
 case $number in
@@ -29,12 +28,6 @@ case $number in
 		exit
 		;;
 	5)
-		read -p "Please input docker id: " id
-		read -p "Please input file name you want to dowmload: " name
-		read -p "please input addresss you want to save: " address
-		cp $id:/leetcode/code/$name $saveaddress
-		;;
-	6)
 		make clean
 		;;
 	*) 
