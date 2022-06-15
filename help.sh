@@ -1,6 +1,11 @@
 #!/bin/bash
+if [[ -z $(sudo docker ps -qf "name=leetcode") ]]
+then
+	sudo docker build -t leetcode:v1 .
+	sudo docker run -dit -p 8080:8080 --name leetcode leetcode:v1
+fi
+id=$(sudo docker ps -aqf "name=leetcode")
 
-read -p "Please input the container id you want to control: " id
 while :
 do
 echo -e "Please select an action: \n \
