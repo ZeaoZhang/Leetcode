@@ -11,8 +11,7 @@ all:
 	@make $(BIN)
 
 test:
-	@$(foreach file,$(BIN),./$(file);if [ $$? -eq 1 ];then echo $(file) OK;else echo $(file) False;fi;)
-
+	@$(foreach file,$(BIN),./$(file);if [ $$? -eq 0 ];then echo $(file) False;exit;fi;) echo "All ok"
 
 .PHONY:clean
 clean:
