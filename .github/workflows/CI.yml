@@ -21,10 +21,13 @@ jobs:
         cd ${{ github.workspace }}/code
         echo "::set-output name=test_result::$(make test)"
     - name: PR Comment
-        uses: github-actions-up-and-running/pr-comment@v1.0.1
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          message: ${{ steps.test.outputs.test_result }}
+      uses: github-actions-up-and-running/pr-comment@v1.0.1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        message: ${{ steps.test.outputs.test_result }}
+
+
+
 
 
                     
