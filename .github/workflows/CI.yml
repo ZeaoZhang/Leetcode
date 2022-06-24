@@ -13,13 +13,26 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: make all
+    - name: compile
       run: |
         cd ${{ github.workspace }}/code
         make all
-    - name: make test
+    - name: test
       run: |
         cd ${{ github.workspace }}/code
-        make test
+        echo "::set-output name=test_result::$(make test)"
+    - name: Comment
+        uses: bubkoo/auto-comment@v1
+        run:
+          cd ${{ github.workspace }}/code
+        with:
+          pullRequestOpened: >
+            @{{ author }}
+            this is the result:
+            ${{ steps.test.outputs.test_result }}
+            
 
+            
+            
+          
 
