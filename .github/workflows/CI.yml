@@ -18,6 +18,8 @@ jobs:
         cd ${{ github.workspace }}/code
         make all
     - name: make test
-      run: make test
+      run: |
+        cd ${{ github.workspace }}/code
+        make test
 
 
