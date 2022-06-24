@@ -23,7 +23,7 @@ jobs:
         make test
         echo "::set-output name=test_result::$(make test)"
     - name comment
-      uses: NejcZdovc/comment-pr@v1
+      uses: NejcZdovc/comment-pr@v1.1.1
       with:
         message: "`${{ steps.test.outputs.test_result }}`"
         github_token: ${{secrets.GITHUB_TOKEN}}
