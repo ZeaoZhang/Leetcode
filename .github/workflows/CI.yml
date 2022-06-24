@@ -22,15 +22,11 @@ jobs:
         cd ${{ github.workspace }}/code
         echo "::set-output name=test_result::$(make test)"
     - name: Comment
-        uses: bubkoo/auto-comment@v1
-        run:
-          cd ${{ github.workspace }}/code
+        uses: github-actions-up-and-running/pr-comment@v1.0.0
         with:
-          pullRequestOpened: >
-            @{{ author }}
-            this is the result:
-            ${{ steps.test.outputs.test_result }}
-            
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          message: ${{ steps.test.outputs.test_result }}
+                    
 
             
             
