@@ -18,7 +18,6 @@ jobs:
       run: |
         cd ${{ github.workspace }}/code
         make all
-        ls | grep .*-test
     - name: test
       run: |
         cd ${{ github.workspace }}/code
@@ -29,6 +28,11 @@ jobs:
         file: "result.md"
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    -name: upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: ${{ github.workspace }}/code/**/.*-test$/*
 
 
 
