@@ -32,7 +32,12 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: ${{ github.run_number }}
-        path: ${{ github.workspace }}/code/*?????-test
+        path: |
+          ${{ github.workspace }}/code/*-test
+          ${{ github.workspace }}/code/**-test
+          ${{ github.workspace }}/code/***-test
+          ${{ github.workspace }}/code/****-test
+          ${{ github.workspace }}/code/*****-test
 
 
 
