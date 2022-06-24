@@ -21,18 +21,18 @@ jobs:
     - name: test
       run: |
         cd ${{ github.workspace }}/code
-        make test > ${{ github.workspace }}/.github/workflows/result.md
+        echo "::set-output name=test_result::$(make test)"
     - name: comment
-      uses: NejcZdovc/comment-pr@v1
+      uses: NejcZdovc/comment-pr@v1.1.1
       with:
-        file: "result.md"
-      env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        message: "`${{ steps.test.outputs.test_result }}`"
+        github_token: ${{secrets.GITHUB_TOKEN}}
+
     - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: my-artifact
-        path: ${{ github.workspace }}/code/**/.*-test$/*
+        path: ${{ github.workspace }}/code/.*-test$
 
 
 
