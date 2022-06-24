@@ -18,6 +18,7 @@ jobs:
       run: |
         cd ${{ github.workspace }}/code
         make all
+        ls | grep .*-test
     - name: test
       run: |
         cd ${{ github.workspace }}/code
