@@ -23,6 +23,7 @@ jobs:
         make test > result.md
     - name: comment
       uses: NejcZdovc/comment-pr@v1
+      run: cd ${{ github.workspace }}/code
       with:
         file: "result.md"
       env:
