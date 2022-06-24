@@ -16,6 +16,6 @@ jobs:
     - name: help
       run: | 
         cd ${{ github.workspace }}
-        bash /leetcode/help.sh
+        bash help.sh
 
 
