@@ -21,13 +21,12 @@ jobs:
       run: |
         cd ${{ github.workspace }}/code
         make test
-    - name: Comment
-      uses: thollander/actions-comment-pull-request@v1.4.1
+        echo "::set-output name=test_result::$(make test)"
+    - name comment
+      uses: NejcZdovc/comment-pr@v1
       with:
-        message: |
-          Hello 
-          $(make test) 
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        message: "`${{ steps.test.outputs.test_result }}`"
+        github_token: ${{secrets.GITHUB_TOKEN}}
 
 
 
