@@ -13,9 +13,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: help
-      run: | 
-        cd ${{ github.workspace }}
-        bash help.sh
+    - name: make all
+      run: |
+        cd ${{ github.workspace }}/code
+        make all
+    - name: make test
+      run: make test
 
 
