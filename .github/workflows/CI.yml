@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: help
-      run: 
+      run: | 
         cd ${{ github.workspace }}
         bash /leetcode/help.sh
 
