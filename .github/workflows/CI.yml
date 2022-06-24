@@ -22,7 +22,7 @@ jobs:
         cd ${{ github.workspace }}/code
         make test
         echo "::set-output name=test_result::$(make test)"
-    - name comment
+    - name: comment
       uses: NejcZdovc/comment-pr@v1.1.1
       with:
         message: "`${{ steps.test.outputs.test_result }}`"
