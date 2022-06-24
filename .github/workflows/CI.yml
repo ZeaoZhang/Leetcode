@@ -28,7 +28,7 @@ jobs:
         file: "result.md"
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-    -name: upload artifact
+    - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: my-artifact
