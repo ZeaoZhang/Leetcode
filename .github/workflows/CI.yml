@@ -24,8 +24,6 @@ jobs:
     - name: test
       run: |
         cd ${{ github.workspace }}/code
-        echo "::set-output name=body::$(make test)"
-        echo ${{ steps.test.outputs.body }}
         make test > ${{ github.workspace }}/.github/workflows/result.md
     - name: PR comment
       uses: NejcZdovc/comment-pr@v1
@@ -34,12 +32,19 @@ jobs:
         file: "result.md"
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-    - name: issue comment
+    - name: get-comment-body
+      run: |
+        cd ${{ github.workspace }}/code
+        body="$(cat result.md)"
+        body="${body//'%'/'%25'}"
+        body="${body//$'\n'/'%0A'}"
+        body="${body//$'\r'/'%0D'}" 
+        echo "::set-output name=body::$body"
+    - name: Create comment
       uses: peter-evans/create-or-update-comment@v2
-      if: github.event_name != 'pull_request'
       with:
         issue-number: 1
-        body: ${{ steps.test.outputs.body }}
+        body: ${{ steps.get-comment-body.outputs.body }}
     - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
