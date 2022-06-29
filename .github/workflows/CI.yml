@@ -2,11 +2,10 @@ name: CI
 
 on:
   push:
-    branches: [ "summer666max-patch-1" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  issue_comment:
-    branches: [ "summer666max-patch-1" ]
+
 
 jobs:
   build:
@@ -31,18 +30,6 @@ jobs:
         file: "result.md"
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-    - name: get-comment-body
-      run: |
-        body="$(cat result.md)"
-        body="${body//'%'/'%25'}"
-        body="${body//$'\n'/'%0A'}"
-        body="${body//$'\r'/'%0D'}" 
-        echo "::set-output name=body::$body"
-    - name: Create comment
-      uses: peter-evans/create-or-update-comment@v2
-      with:
-        issue-number: 1
-        body: ${{ steps.get-comment-body.outputs.body }}
     - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
