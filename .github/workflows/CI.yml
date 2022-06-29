@@ -5,6 +5,8 @@ on:
     branches: [ "summer666max-patch-1" ]
   pull_request:
     branches: [ "main" ]
+  issue:
+    branches: [ "summer666max-patch-1" ]
 
 jobs:
   build:
@@ -22,14 +24,21 @@ jobs:
     - name: test
       run: |
         cd ${{ github.workspace }}/code
+        echo "::set-output name=test_result::&(make test)"
         make test > ${{ github.workspace }}/.github/workflows/result.md
-    - name: PS comment
+    - name: PR comment
       uses: NejcZdovc/comment-pr@v1
       if: github.event_name == 'pull_request'
       with:
         file: "result.md"
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - name: issue comment
+      uses: peter-evans/create-or-update-comment@v2
+      if: github.event_name != 'pull_request'
+      with:
+        issue-number: 1
+        body: ${{ steps.test.outputs.test_result }}
     - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
