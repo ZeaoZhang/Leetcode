@@ -5,7 +5,7 @@ on:
     branches: [ "summer666max-patch-1" ]
   pull_request:
     branches: [ "main" ]
-  issue:
+  issue_comment:
     branches: [ "summer666max-patch-1" ]
 
 jobs:
