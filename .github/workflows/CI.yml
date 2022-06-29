@@ -22,8 +22,7 @@ jobs:
     - name: test
       run: |
         cd ${{ github.workspace }}/code
-        echo "the test result is : " > ${{ github.workspace }}/.github/workflows/result.md
-        make test >> ${{ github.workspace }}/.github/workflows/result.md
+        make test > ${{ github.workspace }}/.github/workflows/result.md
     - name: PS comment
       uses: NejcZdovc/comment-pr@v1
       if: github.event_name == 'pull_request'
