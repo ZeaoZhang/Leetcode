@@ -10,7 +10,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     permissions: write-all
 
@@ -34,7 +33,6 @@ jobs:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: get-comment-body
       run: |
-        cd ${{ github.workspace }}/code
         body="$(cat result.md)"
         body="${body//'%'/'%25'}"
         body="${body//$'\n'/'%0A'}"
