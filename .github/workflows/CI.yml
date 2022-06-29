@@ -24,7 +24,8 @@ jobs:
     - name: test
       run: |
         cd ${{ github.workspace }}/code
-        echo "::set-output name=result::$(make test)"
+        echo "::set-output name=body::$(make test)"
+        echo ${{ steps.test.outputs.body }}
         make test > ${{ github.workspace }}/.github/workflows/result.md
     - name: PR comment
       uses: NejcZdovc/comment-pr@v1
@@ -38,7 +39,7 @@ jobs:
       if: github.event_name != 'pull_request'
       with:
         issue-number: 1
-        body: ${{ steps.test.outputs.result }}
+        body: ${{ steps.test.outputs.body }}
     - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
