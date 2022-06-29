@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    permissions: write-all
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+    - name: compile
+      run: |
+        cd ${{ github.workspace }}/code
+        make all
+    - name: test
+      run: |
+        cd ${{ github.workspace }}/code
+        echo "The test result is : " > ${{ github.workspace }}/.github/workflows/result.md
+        make test >> ${{ github.workspace }}/.github/workflows/result.md
+    - name: PS comment
+      uses: NejcZdovc/comment-pr@v1
+      with:
+        file: "result.md"
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - name: upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: ${{ github.run_number }}
+        path: |
+          ${{ github.workspace }}/code/*-test
+          ${{ github.workspace }}/code/**-test
+          ${{ github.workspace }}/code/***-test
+          ${{ github.workspace }}/code/****-test
+          ${{ github.workspace }}/code/*****-test
+
+
+
+
+
+
+                    
