@@ -7,7 +7,6 @@ int main()
     string shorturl = obj.encode(url);
     if(obj.decode(shorturl) == url)
     {
-        cout << " OK" <<endl;
         return 1;
     }
     return 0;
