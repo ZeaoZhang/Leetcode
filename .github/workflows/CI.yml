@@ -32,7 +32,6 @@ jobs:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Create comment from markdown file
       uses: GrantBirki/comment@v2.0.0
-      if: github.event_name ！= 'pull_request'
       with:
         file: /home/runner/work/test/test/.github/workflows/result.md
         issue-number: 9
