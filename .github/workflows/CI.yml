@@ -31,6 +31,18 @@ jobs:
         file: "result.md"
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - name: Create comment from markdown file
+      uses: GrantBirki/comment@v2.0.0
+      if: github.event_name ！= 'pull_request'
+      with:
+        file: /home/runner/work/test/test/.github/workflows/result.md
+        issue-number: 9
+        token: ${{ github.token }}
+        repository: ${{ github.repository }}
+        vars: |
+          sha: ${{ github.sha }}
+          environment: production
+          app: cool-app
     - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
