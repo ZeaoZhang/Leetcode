@@ -3,12 +3,12 @@
 </h1>
 Record the questions I solved in leetcode
 
-## Problems and Solutions
+## Solutions
 
-- 731 My Calendar II 
-    - [information](https://github.com/summer666max/Leetcode/blob/main/information/731.md)
-    - [Solution](https://github.com/summer666max/Leetcode/blob/main/code/includes/731.hpp)
-    - [test](https://github.com/summer666max/Leetcode/blob/main/code/731-test.cpp)
+Question | Report | Solution | Test
+---|---|---|---
+[731, My Calendar II](https://github.com/summer666max/Leetcode/blob/main/information/731.md) |  | [Solution](https://github.com/summer666max/Leetcode/blob/main/code/includes/731.hpp) | [Test](https://github.com/summer666max/Leetcode/blob/main/code/731-test.cpp)
+[1260, Shift 2D Grid](https://github.com/summer666max/Leetcode/blob/main/information/1260.md) | [Report](https://github.com/summer666max/Leetcode/blob/main/report/1260.md) | [Solution](https://github.com/summer666max/Leetcode/blob/main/code/includes/1260.hpp) | [Test](https://github.com/summer666max/Leetcode/blob/main/code/1260-test.cpp)
 
 
 
