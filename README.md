@@ -16,7 +16,7 @@ Question | Report | Solution | Test
 [919. Complete Binary Tree Inserter](https://github.com/summer666max/Leetcode/blob/main/information/919.md) | [Report](https://github.com/summer666max/Leetcode/blob/main/report/919.md) | [Solution](https://github.com/summer666max/Leetcode/blob/main/code/includes/919.hpp) | [Test](https://github.com/summer666max/Leetcode/blob/main/code/919-test.cpp)
 [1184. Distance Between Bus Stops](https://github.com/summer666max/Leetcode/blob/main/information/1184.md) | [Report](https://github.com/summer666max/Leetcode/blob/main/report/1184.md) | [Solution](https://github.com/summer666max/Leetcode/blob/main/code/includes/1184.hpp) | [Test](https://github.com/summer666max/Leetcode/blob/main/code/1184-test.cpp)
 [1260. Shift 2D Grid](https://github.com/summer666max/Leetcode/blob/main/information/1260.md) | [Report](https://github.com/summer666max/Leetcode/blob/main/report/1260.md) | [Solution](https://github.com/summer666max/Leetcode/blob/main/code/includes/1260.hpp) | [Test](https://github.com/summer666max/Leetcode/blob/main/code/1260-test.cpp)
-
+[1331. Rank Transform of an Array](https://github.com/summer666max/Leetcode/blob/main/information/1331.md) | [Report](https://github.com/summer666max/Leetcode/blob/main/report/1331.md) | [Solution](https://github.com/summer666max/Leetcode/blob/main/code/includes/1331.hpp) | [Test](https://github.com/summer666max/Leetcode/blob/main/code/1331-test.cpp)
 
 
 
