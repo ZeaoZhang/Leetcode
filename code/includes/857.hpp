@@ -5,7 +5,10 @@
 using namespace std;
 
 
+
+
 class Solution {
+    const int intmax = 2147483647;
 public:
     double mincostToHireWorkers(vector<int>& quality, vector<int>& wage, int k) {
         int n = quality.size();
@@ -17,7 +20,7 @@ public:
         sort(temp.begin(), temp.end(), [&](const int &x, const int &y){
             return double(wage[x]) / quality[x] < double(wage[y]) / quality[y];
         });
-        double minSum = INT_MAX, sum = 0;
+        double minSum = intmax, sum = 0;
         priority_queue<int, vector<int>> q;
         for(int i = 0; i < k - 1; ++i)
         {
